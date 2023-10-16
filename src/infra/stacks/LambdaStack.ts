@@ -13,11 +13,11 @@ export class LambdaStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const helloLambda = new LambdaFunction(this, 'HelloLambda', {
-      runtime: Runtime.NODEJS_18_X,
-      handler: 'hello.main',
-      code: Code.fromAsset(join(__dirname, '..', '..', 'services')),
-    });
+    // const helloLambda = new LambdaFunction(this, 'HelloLambda', {
+    //   runtime: Runtime.NODEJS_18_X,
+    //   handler: 'hello.main',
+    //   code: Code.fromAsset(join(__dirname, '..', '..', 'services')),
+    // });
     this.helloLambdaIntegration = new LambdaIntegration(helloLambda);
   }
 }
