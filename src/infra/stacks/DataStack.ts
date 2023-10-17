@@ -8,7 +8,6 @@ export class DataStack extends Stack {
 
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
-    super(scope, id, props);
 
     const suffix = getSuffixFromStack(this);
 
