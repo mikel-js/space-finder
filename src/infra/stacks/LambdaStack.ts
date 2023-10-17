@@ -21,6 +21,14 @@ export class LambdaStack extends Stack {
       handler: 'handler',
       entry: join(__dirname, '..', '..', 'services', 'hello.ts'),
     });
+
+    helloLambda.addToRolePolicy(
+      new PolicyStatement({
+        effect: Effect.ALLOW,
+        actions: ['s3:ListAllMyBuckets', 's3:ListBucket'],
+        resources: ['*'], // bad practice
+      })
+    );
     this.helloLambdaIntegration = new LambdaIntegration(helloLambda);
   }
 }
