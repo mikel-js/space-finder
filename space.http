@@ -1,3 +1,6 @@
 
-GET https://iiprfgn4r4.execute-api.eu-north-1.amazonaws.com/prod/spaces
+GET https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces
+###
+
+POST https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces
 ###

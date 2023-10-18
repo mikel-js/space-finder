@@ -12,23 +12,16 @@ interface LambdaStackProps extends StackProps {
 }
 
 export class LambdaStack extends Stack {
-  public readonly helloLambdaIntegration: LambdaIntegration;
+  public readonly spacesLambdaIntegration: LambdaIntegration;
   constructor(scope: Construct, id: string, props: LambdaStackProps) {
     super(scope, id, props);
 
-    const helloLambda = new NodejsFunction(this, 'HelloLambda', {
+    const spacesLambda = new NodejsFunction(this, 'SpacesLambda', {
       runtime: Runtime.NODEJS_18_X,
       handler: 'handler',
-      entry: join(__dirname, '..', '..', 'services', 'hello.ts'),
+      entry: join(__dirname, '..', '..', 'services', 'spaces', 'handler.ts'),
     });
 
-    helloLambda.addToRolePolicy(
-      new PolicyStatement({
-        effect: Effect.ALLOW,
-        actions: ['s3:ListAllMyBuckets', 's3:ListBucket'],
-        resources: ['*'], // bad practice
-      })
-    );
-    this.helloLambdaIntegration = new LambdaIntegration(helloLambda);
+    this.spacesLambdaIntegration = new LambdaIntegration(spacesLambda);
   }
 }
