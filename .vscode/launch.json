@@ -7,14 +7,17 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
+      "name": "Debug local file",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
       ],
-      "program": "${workspaceFolder}\\src\\services\\hello.ts",
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ]
+      "args": [
+        "${relativeFile}"
+      ],
+      "env": {
+        "AWS_REGION": "eu-north-1"
+      }
     }
   ]
 }
