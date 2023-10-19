@@ -22,6 +22,14 @@ export class LambdaStack extends Stack {
       entry: join(__dirname, '..', '..', 'services', 'spaces', 'handler.ts'),
     });
 
+    spacesLambda.addToRolePolicy(
+      new PolicyStatement({
+        effect: Effect.ALLOW,
+        resources: [props.spacesTable.tableArn],
+        actions: ['dynamodb:PutItem'],
+      })
+    );
+
     this.spacesLambdaIntegration = new LambdaIntegration(spacesLambda);
   }
 }
