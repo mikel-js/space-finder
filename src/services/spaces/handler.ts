@@ -18,6 +18,7 @@ async function handler(
     switch (event.httpMethod) {
       case 'GET':
         const getResponse = await getSpaces(event, ddbClient);
+        console.log(getResponse);
         return getResponse;
       case 'POST':
         const postResponse = await postSpaces(event, ddbClient);
