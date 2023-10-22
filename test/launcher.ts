@@ -5,10 +5,10 @@ process.env.TABLE_NAME = 'SpaceTable-0eaafa956cca';
 
 handler(
   {
-    httpMethod: 'POST',
-    body: JSON.stringify({
-      location: 'Manila',
-    }),
+    httpMethod: 'GET',
+    // body: JSON.stringify({
+    //   location: 'Manila',
+    // }),
   } as any,
   {} as any
 );
