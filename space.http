@@ -9,3 +9,11 @@ content-type: application/json
   "location": "Helsinki"
 }
 ###
+
+PUT https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces?id=5d8b494f
+content-type: application/json
+
+{
+  "location": "Helsinki2"
+}
+###
