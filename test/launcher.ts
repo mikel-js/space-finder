@@ -5,7 +5,7 @@ process.env.TABLE_NAME = 'SpaceTable-0eaafa956cca';
 
 handler(
   {
-    httpMethod: 'GET',
+    httpMethod: 'DELETE',
     queryStringParameters: {
       id: '5d8b494f-137b-440b-830c-d632bcd38415',
     },
