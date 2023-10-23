@@ -13,6 +13,7 @@ export async function postSpaces(
   const item = JSON.parse(event.body);
 
   item.id = randomId;
+  validateAsSpaceEntry(item);
 
   const result = await ddbClient.send(
     new PutItemCommand({
