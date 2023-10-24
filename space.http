@@ -6,7 +6,8 @@ POST https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces
 content-type: application/json
 
 {
-  "location": "Helsinki"
+  "location": "Helsinki",
+  "name": "puge",
 }
 ###
 
