@@ -6,8 +6,8 @@ const awsRegion = 'eu-west-1';
 Amplify.configure({
   Auth: {
     region: awsRegion,
-    userPoolId: 'eu-west-1_azOXLiuLi',
-    userPoolWebClientId: 'nu59r0nf8djfh9uordchjmjm4',
+    userPoolId: 'eu-north-1_EgzsHjAjT',
+    userPoolWebClientId: '71eguukrk66e8vg476rii5bbrc',
     authenticationFlowType: 'USER_PASSWORD_AUTH',
   },
 });
