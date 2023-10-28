@@ -1,5 +1,8 @@
+@url = https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/
 
-GET https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces
+@token = eyJraWQiOiJDSUUxdnEzUjc3MjRXV0VcL0E5cE80NmlWakRKeFlnamx2YlBXODlPNFFDdz0iLCJhbGciOiJSUzI1NiJ9.eyJvcmlnaW5fanRpIjoiYjAxM2I5MGUtNGIyMi00OGI4LTk2MmUtNGMyMTI5MWNjNDZiIiwic3ViIjoiZDVkYTY1NGEtZGI4Ni00MDljLTk2MmItMWI1M2JlZmVjN2Y3IiwiYXVkIjoiNzFlZ3V1a3JrNjZlOHZnNDc2cmlpNWJicmMiLCJldmVudF9pZCI6ImM3ZjU3ZDRmLWNjODktNGRjYS1iNDJkLTlkNGYzN2E5OGUwMSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjk4NDQwNTY3LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xX0VnenNIakFqVCIsImNvZ25pdG86dXNlcm5hbWUiOiJkdWtlIiwiZXhwIjoxNjk4NDQ0MTY2LCJpYXQiOjE2OTg0NDA1NjcsImp0aSI6IjRlZTE3MTBmLWFkYjEtNDIxYS1hZGMxLTU3Yzc1MmEwMTBiOSJ9.TdUsT8K5s8p1CaNAyFcZ40qpycVv-fGrYL1RBa_HeW-R7NuIE_OPUHbE-_nQtQIzuwR5JUlFz6OQIfT-MWuSS2IFXp9To3S1oY78ilwicY2cuS4nYT8uzieqlrTF3QxABXj5QVYDSWZv1czflgG9Fjqe4cwxTZpSZJ4cv2lvaDSniJCSYfqqB4bl_Vv95FZM6mTFm74U4txQ7GRsTdTA2OfUj8AOe1i1wKKX4dmR6hVvg-BwCyYWsv2-FceTu3g28duzlgazCH1r-9-HoL2ywa6vFByFUECTKAI4G6iCp7S0E5CRvZCy3pu3Ue7sTEUbcoIXm1Jjz1RJareljgBgsg
+GET {{url}}/spaces
+Authorization: {{token}}
 ###
 
 POST https://nqzspty8wf.execute-api.eu-north-1.amazonaws.com/prod/spaces
@@ -17,4 +20,8 @@ content-type: application/json
 {
   "location": "Helsinki2"
 }
+###
+
+DELETE {{url}}/spaces
+Authorization: {{token}}
 ###
