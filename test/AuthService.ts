@@ -23,10 +23,10 @@ export class AuthService {
 
   public async generateTemporaryCredentials(user: CognitoUser) {
     const jwtToken = user.getSignInUserSession().getIdToken().getJwtToken();
-    const cognitoIdentityPool = `cognito-idp.${awsRegion}.amazonaws.com/eu-west-1_azOXLiuLi`;
+    const cognitoIdentityPool = `cognito-idp.${awsRegion}.amazonaws.com/eu-north-1_EgzsHjAjT`;
     const cognitoIdentity = new CognitoIdentityClient({
       credentials: fromCognitoIdentityPool({
-        identityPoolId: 'eu-west-1:5b2b0567-17ce-4070-b540-3e4688c46f43',
+        identityPoolId: 'eu-north-1:08c9cabd-8612-4def-933f-22a402a94b94',
         logins: {
           [cognitoIdentityPool]: jwtToken,
         },
