@@ -27,10 +27,10 @@ export class AuthStack extends Stack {
 
     this.createUserPool();
     this.createUserPoolClient();
-    this.createAdminsGroup();
     this.createIdentityPool();
     this.createRoles();
     this.attachRoles();
+    this.createAdminsGroup();
   }
 
   private createUserPool() {
