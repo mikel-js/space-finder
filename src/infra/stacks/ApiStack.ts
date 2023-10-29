@@ -22,6 +22,7 @@ export class ApiStack extends Stack {
     super(scope, id, props);
 
     const api = new RestApi(this, 'SpacesApi');
+
     const authorizer = new CognitoUserPoolsAuthorizer(
       this,
       'SpacesApiAuthorizer',

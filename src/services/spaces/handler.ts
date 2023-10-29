@@ -58,7 +58,6 @@ async function handler(
       body: error.message,
     };
   }
-
   addCorsHeader(response);
   return response;
 }
